@@ -1,6 +1,7 @@
 #!/bin/bash
 
 SESSION="main"
+
 if tmux has-session -t $SESSION 2>/dev/null; then
     echo "Session $SESSION already exists. Attaching to it."
     tmux attach-session -t $SESSION
