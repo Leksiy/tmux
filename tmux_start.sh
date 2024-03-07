@@ -13,5 +13,7 @@ else
     tmux send-keys -t 1 'speedometer -s -k 256 -t enp0s3 -r enp0s3' C-m
     tmux send-keys -t 2 'glances' C-m
     tmux select-pane -t 0
+    tmux split-window -v
+    tmux send-keys -t 0 'mc' C-m
     tmux attach-session -t $SESSION
 fi
